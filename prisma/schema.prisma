@@ -1,0 +1,32 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Images {
+  imagesID Int @id @default(autoincrement())
+  url String
+  Re Re @relation(fields: [reID], references: [reID])
+  reID Int
+}
+
+model Re {
+  reID Int @id @default(autoincrement())
+  detailUrl String
+  title String
+  image Images[]
+  sqm String
+  externalID String
+  latitude String
+  longitude String
+  price String
+  typology String
+  city String
+}

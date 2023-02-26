@@ -20,13 +20,13 @@ model Images {
 model Re {
   reID Int @id @default(autoincrement())
   detailUrl String
-  title String
+  title String?
   image Images[]
   sqm String
   externalID String
   latitude String
   longitude String
   price String
-  typology String
+  typology String?
   city String
 }

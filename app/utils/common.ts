@@ -108,7 +108,7 @@ export const listComuni = [
     'provincia-vr/comuni/',
     'provincia-vi/comuni/'
   ];
-
+ 
   export const BASE_IMMO_LISTING = "https://www.immobiliare.it/vendita-case/"
   export const BASE_IMMO_AUTOCOMPLETE_1 = "https://www.immobiliare.it/search/autocomplete?query="
   export const BASE_IMMO_AUTOCOMPLETE_2 = "&withRegions=true&withCountries=true&international=true"
@@ -120,7 +120,14 @@ export const listComuni = [
     'genova',
     'bologna',
     'firenze',
-    'venezia',
+    'torino',
+  ]
+  export const paramsImmo = [
+    '?idProvincia=MI&idComune=8042&idContratto=1&idCategoria=1&criterio=rilevanza&path=&',
+    '?idProvincia=GE&idComune=6846&idContratto=1&idCategoria=1&criterio=rilevanza&path=&',
+    '?idProvincia=BO&idComune=5890&idContratto=1&idCategoria=1&criterio=rilevanza&path=&',
+    '?idProvincia=FI&idComune=11609&idContratto=1&idCategoria=1&criterio=rilevanza&path=&',
+    '?idProvincia=TO&idComune=9987&idContratto=1&idCategoria=1&criterio=rilevanza&path=&',
   ]
   /* [
     "agugliaro",

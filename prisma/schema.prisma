@@ -10,6 +10,22 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  userID   Int @id @default(autoincrement())
+  email    String    @unique
+  password String
+  points   Int
+  games Games[]
+}
+
+model Games {
+  gamesID Int @id @default(autoincrement())
+  Re Re @relation(fields: [reID], references: [reID])
+  reID Int
+  user User @relation(fields: [userID], references: [userID])
+  userID Int
+}
+
 model Images {
   imagesID Int @id @default(autoincrement())
   url String
@@ -22,6 +38,7 @@ model Re {
   detailUrl String
   title String?
   image Images[]
+  games Games[]
   sqm String
   externalID String
   latitude String

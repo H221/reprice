@@ -116,18 +116,18 @@ export const listComuni = [
   export const BASE_IMMO_DETAIL = "https://www.immobiliare.it/annunci/"
   
   export const listing = [
-    "milano",
+    // "milano",
     'genova',
-    'bologna',
-    'firenze',
-    'torino',
+    // 'bologna',
+    // 'firenze',
+    // 'torino',
   ]
   export const paramsImmo = [
-    '?idProvincia=MI&idComune=8042&idContratto=1&idCategoria=1&criterio=rilevanza&path=&',
+    // '?idProvincia=MI&idComune=8042&idContratto=1&idCategoria=1&criterio=rilevanza&path=&',
     '?idProvincia=GE&idComune=6846&idContratto=1&idCategoria=1&criterio=rilevanza&path=&',
-    '?idProvincia=BO&idComune=5890&idContratto=1&idCategoria=1&criterio=rilevanza&path=&',
-    '?idProvincia=FI&idComune=11609&idContratto=1&idCategoria=1&criterio=rilevanza&path=&',
-    '?idProvincia=TO&idComune=9987&idContratto=1&idCategoria=1&criterio=rilevanza&path=&',
+    // '?idProvincia=BO&idComune=5890&idContratto=1&idCategoria=1&criterio=rilevanza&path=&',
+    // '?idProvincia=FI&idComune=11609&idContratto=1&idCategoria=1&criterio=rilevanza&path=&',
+    // '?idProvincia=TO&idComune=9987&idContratto=1&idCategoria=1&criterio=rilevanza&path=&',
   ]
   /* [
     "agugliaro",

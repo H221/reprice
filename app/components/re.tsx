@@ -4,10 +4,11 @@ import { Carousel } from 'react-responsive-carousel';
 import ButtonPrice from '~/components/buttonPrice';
 
 export default function Re({ re, className }: any) {
+  console.log("re")
   console.log(re)
   var gallery, price 
-  if(re.images){
-    console.log('images')
+  if(re.success == undefined){
+    // console.log('images')
     gallery = <Carousel dynamicHeight={false} width="200" className='object-cover w-full rounded-t-lg h-96 md:h-auto md:w-3/5 md:rounded-none md:rounded-l-lg'>
       {re.images.map((image: string) => {
         return (
@@ -18,22 +19,22 @@ export default function Re({ re, className }: any) {
       })}
     </Carousel>
     price = (<div className='flex justify-center mt-5'>
-    {re.price.map((item: any, index: number) => {
-      return (<ButtonPrice price={item} id={re.externalID} key={index}></ButtonPrice>)
-    })}
-  </div>)
+      {re.price.map((item: any, index: number) => {
+        return (<ButtonPrice price={item} id={re.externalID} key={index}></ButtonPrice>)
+      })}
+    </div>)
   }else{
-  console.log('image')
-  gallery = <Carousel dynamicHeight={false} width="200" className='object-cover w-full rounded-t-lg h-96 md:h-auto md:w-3/5 md:rounded-none md:rounded-l-lg'>
-    {re.image.map((image: any) => {
-      return (
-        <div key={image.imagesID}>
-          <img src={image.url}></img>
-        </div>
-      )
-    })}
-    </Carousel>
-    price = ''
+    console.log('image')
+    gallery = <Carousel dynamicHeight={false} width="200" className='object-cover w-full rounded-t-lg h-96 md:h-auto md:w-3/5 md:rounded-none md:rounded-l-lg'>
+      {re.image.map((image: any, index:number) => {
+        return (
+          <div key={index}>
+            <img src={image}></img>
+          </div>
+        )
+      })}
+      </Carousel>
+      price = ''
   }
   return (
     <div>
